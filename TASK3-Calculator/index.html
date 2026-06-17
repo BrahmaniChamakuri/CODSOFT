@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="page">
+    <div class="calc">
+
+      <!-- DISPLAY -->
+      <div class="display">
+        <div class="expr" id="expr"></div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="grid">
+        <button class="fn" onclick="clearAll()">AC</button>
+        <button class="fn" onclick="toggleSign()">+/-</button>
+        <button class="fn" onclick="percent()">%</button>
+        <button class="op" onclick="setOp('/')">÷</button>
+
+        <button class="num" onclick="pressNum('7')">7</button>
+        <button class="num" onclick="pressNum('8')">8</button>
+        <button class="num" onclick="pressNum('9')">9</button>
+        <button class="op" onclick="setOp('*')">×</button>
+
+        <button class="num" onclick="pressNum('4')">4</button>
+        <button class="num" onclick="pressNum('5')">5</button>
+        <button class="num" onclick="pressNum('6')">6</button>
+        <button class="op" onclick="setOp('-')">−</button>
+
+        <button class="num" onclick="pressNum('1')">1</button>
+        <button class="num" onclick="pressNum('2')">2</button>
+        <button class="num" onclick="pressNum('3')">3</button>
+        <button class="op" onclick="setOp('+')">+</button>
+
+        <button class="num zero" onclick="pressNum('0')">0</button>
+        <button class="num" onclick="pressDot()">.</button>
+        <button class="eq" onclick="calculate()">=</button>
+      </div>
+
+      <!-- HISTORY -->
+      <div class="history">
+        <div class="hist-header">
+          <span>History</span>
+          <button onclick="clearHistory()">Clear</button>
+        </div>
+        <div id="histList"></div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
