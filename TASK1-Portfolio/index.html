@@ -3,288 +3,374 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Vedha — Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-logo">Alex Rivera</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>Online Portfolio</h1>
+      <p>Just another My Blog site</p>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT ME</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#skills">SKILL</a></li>
+      <li><a href="#testimonial">TESTIMONIAL</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#blog">BLOG</a></li>
+      <li><a href="#contact">CONTACT US</a></li>
     </ul>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" id="hamburger">☰</button>
   </nav>
-  <ul class="mobile-nav" id="mobileNav">
-    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-    <li><a href="#resume" onclick="toggleMenu()">Resume</a></li>
-    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-  </ul>
 
   <!-- HERO -->
-  <section id="hero">
-    <div class="hero-text">
-      <p class="hero-tag">👋 Welcome to my portfolio</p>
-      <h1>Hi, I'm <span>Alex Rivera</span></h1>
-      <p class="hero-sub">Full-Stack Developer building fast, beautiful web apps with React, Node.js and MongoDB.</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-fill">View Projects</a>
-        <a href="#contact" class="btn-border">Contact Me</a>
-      </div>
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>VEDHA</h1>
+      <p>Hi, I am a Full Stack Web Developer and Computer Science student. I build modern, responsive web applications with React, Node.js and MongoDB.</p>
+      <a href="#contact" class="hire-btn">Hire Me</a>
     </div>
     <div class="hero-img">
-      <div class="avatar">
-        <span>AR</span>
-      </div>
+      <div class="hero-avatar">V</div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-inner two-col">
-      <div class="about-img-box">
-        <div class="about-avatar">AR</div>
-        <div class="exp-badge">3+ Years Experience</div>
+  <!-- ABOUT ME -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <div class="about-avatar">V</div>
+    </div>
+    <div class="about-content">
+      <h2>ABOUT ME</h2>
+      <div class="underline"></div>
+      <p class="about-lead">I Am a Developer who blends expertise with industry know-how to build your next great web product.</p>
+      <p class="about-body">Full Stack Developers use modern development languages and tools to write, build, maintain, and test web applications. Full Stack Developers follow the software development lifecycle (SDLC) to plan, design, build, test, and deploy web applications, ranging from websites and mobile applications to web apps and dashboards. In addition to creating new software, Full Stack Developers improve and maintain the working order of existing software.</p>
+      <a href="#" class="download-btn" download>DOWNLOAD RESUME</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <h2>SERVICES</h2>
+      <div class="underline"></div>
+      <p>What I can do for you</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Web Development</h3>
+        <p>Building fast, responsive, and scalable web applications using React, Node.js, and modern frameworks.</p>
       </div>
-      <div class="about-content">
-        <p class="section-label">About Me</p>
-        <h2>Passionate developer from Hyderabad</h2>
-        <p>I'm a full-stack developer who loves building clean, user-friendly web applications. I graduated with a B.Tech in Computer Science and have worked with startups and agencies.</p>
-        <p>When I'm not coding, I'm exploring new technologies, contributing to open source, or hiking.</p>
-        <div class="about-stats">
-          <div class="astat"><strong>20+</strong><span>Projects</span></div>
-          <div class="astat"><strong>12+</strong><span>Clients</span></div>
-          <div class="astat"><strong>3+</strong><span>Years</span></div>
-        </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI/UX Design</h3>
+        <p>Designing clean, user-friendly interfaces that provide great user experiences across all devices.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗄️</div>
+        <h3>Backend Development</h3>
+        <p>Creating robust REST APIs and server-side logic with Node.js, Express, and MongoDB databases.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Ensuring all websites work perfectly on mobile phones, tablets, and desktop screens.</p>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-inner">
-      <p class="section-label center">Technologies</p>
-      <h2 class="center">My Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🎨</span>
-            <h3>Frontend</h3>
-          </div>
-          <ul>
-            <li>HTML5 &amp; CSS3</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Tailwind CSS</li>
-          </ul>
-          <div class="skill-bar-bg"><div class="skill-bar" data-w="90"></div></div>
+  <section class="skills" id="skills">
+    <div class="section-header dark">
+      <h2>SKILL</h2>
+      <div class="underline light"></div>
+      <p>My Technical Skills</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>HTML5 & CSS3</span>
+          <span>95%</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">⚙️</span>
-            <h3>Backend</h3>
-          </div>
-          <ul>
-            <li>Node.js &amp; Express</li>
-            <li>REST APIs</li>
-            <li>Python</li>
-            <li>GraphQL</li>
-          </ul>
-          <div class="skill-bar-bg"><div class="skill-bar" data-w="82"></div></div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="95"></div>
         </div>
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🗄️</span>
-            <h3>Database</h3>
-          </div>
-          <ul>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>Firebase</li>
-          </ul>
-          <div class="skill-bar-bg"><div class="skill-bar" data-w="78"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>JavaScript</span>
+          <span>88%</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-top">
-            <span class="skill-icon">🚀</span>
-            <h3>Tools</h3>
-          </div>
-          <ul>
-            <li>Git &amp; GitHub</li>
-            <li>Docker</li>
-            <li>AWS / Netlify</li>
-            <li>VS Code</li>
-          </ul>
-          <div class="skill-bar-bg"><div class="skill-bar" data-w="75"></div></div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="88"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>React.js</span>
+          <span>85%</span>
+        </div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="85"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>Node.js & Express</span>
+          <span>82%</span>
+        </div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="82"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>MongoDB</span>
+          <span>80%</span>
+        </div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="80"></div>
+        </div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top">
+          <span>Git & GitHub</span>
+          <span>78%</span>
+        </div>
+        <div class="skill-bar-bg">
+          <div class="skill-bar-fill" data-w="78"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-inner">
-      <p class="section-label center">Work</p>
-      <h2 class="center">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="proj-card">
-          <div class="proj-banner" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">🛒</div>
-          <div class="proj-body">
-            <span class="proj-stack">React · Node · MongoDB</span>
-            <h3>ShopSphere E-Commerce</h3>
-            <p>Full-stack store with cart, Stripe payments, and admin dashboard.</p>
-            <div class="proj-links">
-              <a href="#" class="btn-fill sm">Live Demo</a>
-              <a href="#" class="btn-border sm">GitHub</a>
-            </div>
-          </div>
+  <!-- TESTIMONIAL -->
+  <section class="testimonial" id="testimonial">
+    <div class="section-header">
+      <h2>TESTIMONIAL</h2>
+      <div class="underline"></div>
+      <p>What people say about me</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-avatar">PR</div>
+        <div class="stars">★★★★★</div>
+        <p>"Vedha built our company website from scratch. The work was clean, fast, and delivered on time. Highly recommended!"</p>
+        <strong>Priya Reddy</strong>
+        <span>CEO, TechStart Hyderabad</span>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar">AM</div>
+        <div class="stars">★★★★★</div>
+        <p>"Excellent full stack developer. Built our e-commerce platform with great attention to detail and user experience."</p>
+        <strong>Arjun Mehta</strong>
+        <span>Founder, ShopLocal</span>
+      </div>
+      <div class="testi-card">
+        <div class="testi-avatar">SK</div>
+        <div class="stars">★★★★★</div>
+        <p>"Professional, skilled, and communicates well throughout the project. The final product exceeded our expectations."</p>
+        <strong>Sneha Kulkarni</strong>
+        <span>Product Manager, InnoSoft</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="section-header dark">
+      <h2>EXPERIENCE</h2>
+      <div class="underline light"></div>
+      <p>My Work Experience</p>
+    </div>
+    <div class="experience-grid">
+      <div class="exp-card">
+        <div class="exp-year">2024</div>
+        <div class="exp-info">
+          <h3>Web Development Intern</h3>
+          <span>CodSoft</span>
+          <p>Completed 7 full-stack web development projects including a Job Board, Quiz Maker, E-Commerce platform, and Project Management tool.</p>
         </div>
-        <div class="proj-card">
-          <div class="proj-banner" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">📋</div>
-          <div class="proj-body">
-            <span class="proj-stack">React · Express · PostgreSQL</span>
-            <h3>TaskFlow — Project Manager</h3>
-            <p>Kanban-style tool with drag-and-drop and team collaboration.</p>
-            <div class="proj-links">
-              <a href="#" class="btn-fill sm">Live Demo</a>
-              <a href="#" class="btn-border sm">GitHub</a>
-            </div>
-          </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-year">2023</div>
+        <div class="exp-info">
+          <h3>Frontend Developer</h3>
+          <span>Freelance</span>
+          <p>Built responsive websites and web applications for local clients using HTML, CSS, JavaScript, and React.js.</p>
         </div>
-        <div class="proj-card">
-          <div class="proj-banner" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">🧠</div>
-          <div class="proj-body">
-            <span class="proj-stack">React · Firebase</span>
-            <h3>QuizMaster Platform</h3>
-            <p>Create and take quizzes with real-time scoring and leaderboards.</p>
-            <div class="proj-links">
-              <a href="#" class="btn-fill sm">Live Demo</a>
-              <a href="#" class="btn-border sm">GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-banner" style="background:linear-gradient(135deg,#059669,#10b981)">💼</div>
-          <div class="proj-body">
-            <span class="proj-stack">React · Node · MongoDB</span>
-            <h3>JobNest — Job Board</h3>
-            <p>Job board connecting employers and candidates with email alerts.</p>
-            <div class="proj-links">
-              <a href="#" class="btn-fill sm">Live Demo</a>
-              <a href="#" class="btn-border sm">GitHub</a>
-            </div>
-          </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-year">2022</div>
+        <div class="exp-info">
+          <h3>B.Tech Computer Science</h3>
+          <span>JNTU Hyderabad</span>
+          <p>Pursuing Bachelor of Technology in Computer Science with focus on web development and software engineering.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section id="resume">
-    <div class="section-inner resume-wrap">
-      <p class="section-label center">Career</p>
-      <h2 class="center">Resume</h2>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-info">
-            <span class="tl-date">2023 – Present</span>
-            <h3>Full-Stack Developer — TechWave Pvt. Ltd.</h3>
-            <p>Built 4+ client web apps, led migration to GraphQL, reduced load times by 40%.</p>
-          </div>
+  <!-- WORKS -->
+  <section class="works" id="works">
+    <div class="section-header">
+      <h2>WORKS</h2>
+      <div class="underline"></div>
+      <p>My Recent Projects</p>
+    </div>
+    <div class="works-grid">
+      <div class="work-card">
+        <div class="work-img" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">
+          <span>🛒</span>
         </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-info">
-            <span class="tl-date">2022 – 2023</span>
-            <h3>Frontend Intern — Pixel Studio</h3>
-            <p>Built React UI components, collaborated in Figma, shipped 3 products.</p>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-info">
-            <span class="tl-date">2019 – 2023</span>
-            <h3>B.Tech Computer Science — JNTU Hyderabad</h3>
-            <p>Graduated with 8.4 CGPA. Final project: AI-powered resume parser.</p>
-          </div>
+        <div class="work-body">
+          <h3>E-Commerce Website</h3>
+          <p>Full-stack online shopping platform with cart, checkout, and order management.</p>
+          <span class="work-tag">React · Node · MongoDB</span>
         </div>
       </div>
-      <div style="text-align:center;margin-top:32px">
-        <a href="#" class="btn-fill" download>⬇ Download Resume PDF</a>
+      <div class="work-card">
+        <div class="work-img" style="background:linear-gradient(135deg,#0891b2,#06b6d4)">
+          <span>📋</span>
+        </div>
+        <div class="work-body">
+          <h3>Project Manager</h3>
+          <p>Kanban-style project management tool with task tracking and progress boards.</p>
+          <span class="work-tag">React · Node · MongoDB</span>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-img" style="background:linear-gradient(135deg,#059669,#10b981)">
+          <span>💼</span>
+        </div>
+        <div class="work-body">
+          <h3>Job Board</h3>
+          <p>Job listing platform connecting employers with candidates and application tracking.</p>
+          <span class="work-tag">React · Node · MongoDB</span>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-img" style="background:linear-gradient(135deg,#d97706,#f59e0b)">
+          <span>🧠</span>
+        </div>
+        <div class="work-body">
+          <h3>Quiz Maker</h3>
+          <p>Online quiz creation and scoring platform with timer and result review.</p>
+          <span class="work-tag">React · Node · MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog" id="blog">
+    <div class="section-header dark">
+      <h2>BLOG</h2>
+      <div class="underline light"></div>
+      <p>My Latest Articles</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img">🌐</div>
+        <div class="blog-body">
+          <span class="blog-date">June 2024</span>
+          <h3>Getting Started with React.js</h3>
+          <p>A beginner's guide to building your first React application with components, state, and props.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🗄️</div>
+        <div class="blog-body">
+          <span class="blog-date">May 2024</span>
+          <h3>Building REST APIs with Node.js</h3>
+          <p>Step by step guide to creating a professional REST API using Express.js and MongoDB.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🎨</div>
+        <div class="blog-body">
+          <span class="blog-date">April 2024</span>
+          <h3>CSS Tips for Better UI Design</h3>
+          <p>Practical CSS techniques to make your websites look more professional and modern.</p>
+          <a href="#">Read More →</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-inner">
-      <p class="section-label center">Get In Touch</p>
-      <h2 class="center">Contact Me</h2>
-      <div class="contact-grid">
-        <div class="contact-left">
-          <div class="contact-item">
-            <span>📧</span>
-            <div>
-              <small>Email</small>
-              <a href="mailto:alex@email.com">alex.rivera@email.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span>📱</span>
-            <div>
-              <small>Phone</small>
-              <p>+91 98765 43210</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span>📍</span>
-            <div>
-              <small>Location</small>
-              <p>Hyderabad, Telangana</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <h2>CONTACT US</h2>
+      <div class="underline"></div>
+      <p>Get in touch with me</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="cicon">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>vedha@email.com</p>
           </div>
         </div>
-        <form class="contact-form" onsubmit="sendMsg(event)">
-          <div class="field">
-            <label>Name</label>
-            <input type="text" placeholder="Your name" required/>
+        <div class="contact-item">
+          <span class="cicon">📱</span>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 98765 43210</p>
           </div>
-          <div class="field">
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com" required/>
+        </div>
+        <div class="contact-item">
+          <span class="cicon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>Hyderabad, Telangana, India</p>
           </div>
-          <div class="field">
-            <label>Message</label>
-            <textarea rows="5" placeholder="Your message..." required></textarea>
-          </div>
-          <button type="submit" class="btn-fill full">Send Message →</button>
-          <p id="sent-msg" class="sent-msg">✅ Message sent successfully!</p>
-        </form>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-btn">GitHub</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+          <a href="#" class="social-btn">Twitter</a>
+        </div>
       </div>
+      <form class="contact-form" onsubmit="sendMsg(event)">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required/>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required/>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Subject"/>
+        </div>
+        <div class="form-group">
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="hire-btn">SEND MESSAGE</button>
+        <p id="sent-msg" class="sent-msg">✅ Message sent successfully!</p>
+      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-      <span class="footer-logo">Alex Rivera</span>
-      <p>© 2024 Alex Rivera. Built with HTML, CSS & JavaScript.</p>
+      <h3>Online Portfolio</h3>
+      <p>© 2024 Vedha. All Rights Reserved.</p>
       <div class="footer-links">
-        <a href="#hero">Top</a>
-        <a href="#projects">Projects</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
         <a href="#contact">Contact</a>
       </div>
     </div>

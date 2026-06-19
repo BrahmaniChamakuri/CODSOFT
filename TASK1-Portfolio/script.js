@@ -1,7 +1,17 @@
-// Mobile nav toggle
-function toggleMenu() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close menu when link clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
 
 // Contact form
 function sendMsg(e) {
@@ -13,20 +23,40 @@ function sendMsg(e) {
 }
 
 // Skill bar animation on scroll
-const bars = document.querySelectorAll('.skill-bar');
-const observer = new IntersectionObserver((entries) => {
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.width = entry.target.dataset.w + '%';
+      const bar = entry.target;
+      bar.style.width = bar.dataset.w + '%';
     }
   });
-}, { threshold: 0.3 });
-bars.forEach(bar => observer.observe(bar));
+}, { threshold: 0.4 });
 
-// Navbar solid on scroll
+skillBars.forEach(bar => {
+  skillObserver.observe(bar);
+});
+
+// Active nav highlight on scroll
+const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  nav.style.background = window.scrollY > 50
-    ? 'rgba(15,14,23,0.99)'
-    : 'rgba(15,14,23,0.95)';
+  let current = '';
+  sections.forEach(sec => {
+    if (window.scrollY >= sec.offsetTop - 80) {
+      current = sec.id;
+    }
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? '#1e90ff' : '';
+  });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    nav.style.background = '#111';
+  } else {
+    nav.style.background = '#1a1a1a';
+  }
 });
